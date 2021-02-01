@@ -1,0 +1,186 @@
+:root {   /*declaração de variáveis das cores principais do site */
+          --vermelho: #e60000;
+          --preta: #333333;
+          --azulescuro: #24248f;
+          --escura: #5900b3;
+      }
+
+
+*     {   /* zera todas a formatações de fábrica dos browsers */
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box; /* o texto ou imagem não podem ultrapassar a borda da caixa */
+      }
+/* elementos base */
+body  {   display: flex;
+          flex-direction: column;
+          width: 100%;
+          min-height: 100vh;
+          background-color: var(--azulescuro);  /* cor do fundo */
+          font-family: 'Times New Roman' , Times, serif ;
+          margin: 10px;
+          margin-top: 10px;
+          padding: 20px;;
+          padding-top: 20px;
+          color: white;                       /* cor da letra ou fonte */
+          text-align: center;
+          justify-content: center;  Alinha na vertical todo o conteúdo do corpo do html */
+      }
+
+bodyheader        { background-color: var(--preta); }
+
+    bodyheader  h1    {   font-size: 200%;
+                          margin-top: 20px;
+                          margin-bottom: 10px;
+                      }
+
+    bodyheader  h2    {   font-weight: 900;
+                          color: yellow;
+                          margin-bottom: 10px;
+                      }
+
+    bodyheader .line  { font-size: 120%;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-around;
+                        background-color: var(--azulescuro);
+                        padding-top: 10px;
+                        padding-bottom: 10px;
+
+                      }
+
+    bodyheader  link  { font-size: 120%;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-around;
+                        background-color: var(--azulescuro);
+                        padding-top: 10px;
+                        padding-bottom: 10px;
+                      }
+
+sectionheader         { background-color: var(--escura);}
+
+  sectionheader .container
+                {
+                    background-color: var(--escura);
+                    border: 4px solid yellow;
+                    display: flex; /* sistema de alinhamento de conteúdosdentro de caixas*/
+                    flex-direction: row; /* alinhamento padrão do sistema flex */
+                    align-items: center; /* alinhamento vertical quando flex-direction = row */
+                    justify-content: space-between; /* alinhamento horizontal com espaço entre os elementos */
+                    width: 90%;
+                    padding-left: 20px;
+                    margin-left: 50px;
+                }
+
+  sectionheader .logo
+                {   margin-left: 2px;
+                    color: var(--vermelho);
+                    font-family: 'Arial Black', Times;
+                    font-size: 40px;
+                }
+
+  sectionheader nav a
+                {   font-family: fantasy;
+                    font: Times;
+                    color: yellow;
+                    margin-right: 30px;
+                    font-size: 120%;
+                    font-style: italic;
+                }
+
+  sectionheader nav a:hover
+                {   color: red;
+                    text-decoration: none;
+                    font-weight: bolder;
+                }
+
+/* filme principal */
+
+main
+  .filme-principal
+      {   padding-top: 15px;
+          font-size: 25px;
+          color: white;
+          background: linear-gradient(rgba(0,0,0,.50),rgba(0, 0, 0, .50)100%), url("./../imgs/capa-house.jpg");
+          height: 435px; /* altura da caixa */
+          background-size:  cover; /* a imagem cobre toda a area disponivel se ajustando a ela */
+          display: flex;
+          flex-direction: column;
+          justify-content:   space-between;
+          align-items:  stretch;
+      }
+
+  .filme-principal .maincontainer
+      {   margin-left: 40px;
+          width: 90%;
+          color: white;
+      }
+
+  .filme-principal .titulo
+      {   font-size: 50px;
+          margin-top: 5px;
+          font-family: 'Trebuchet MS', 'Lucida Sans Unicode'
+          color: white;
+      }
+
+  .filme-principal  .descricao
+      {   margin-bottom: 40px;
+          margin-top: 30px;
+          color: yellow;
+          text-align: justify;
+          width:70%;
+      }
+
+  .filme-principal .botao
+      {   background-color: rgba(0,0,0,.50);
+          border-radius: 5px;
+          border-style: dotted;
+          color: white;
+          padding: 15px 30px; /* espaço interno de um elemento */
+          margin-right: 15px;
+          font-size: 17px;
+          cursor:       grab;
+          transition: .8s ease all;
+      }
+
+  .filme-principal  .botao:hover
+      {   background-color: white;
+          color: black;
+          font-weight: 900;
+      }
+
+   .filme-principal .botao i /* botão com ícones do fontawesome */
+      {   margin-right: 10px;
+      }
+
+/* # WRAPPER = ENVELOPAR */
+
+footer
+      {   display: flex;
+          flex-direction:   column ;
+          justify-content:    space-between ;
+          box-sizing: border-box;
+          border-color: inherit;
+          width: 100%;
+          color: yellow;
+          font-size: 18px;
+          margin-top: 25px;
+          cursor: grab;
+      }
+
+.footer .carousel-filmes
+      {   margin-top: 25 px;
+          text-align: justify;
+          box-sizing: border-box;
+          justify-content: space-between;
+      }
+
+.footer .box-filme
+      {   margin-top: 25px;
+          height: 100%;
+          width: 90%;
+          justify-content:  space-between;
+          text-align: justify;
+          box-sizing: border-box;
+      }
